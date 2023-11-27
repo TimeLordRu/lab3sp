@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt-get update
+RUN apt install gcc g++ gdb gcc-multilib nano -y
+COPY 3_lab.cpp .
+RUN gcc -fno-pie -no-pie 3_lab.cpp -o lab3 -g -lstdc++
+CMD ./lab3
